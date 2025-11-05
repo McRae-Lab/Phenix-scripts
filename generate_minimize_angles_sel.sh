@@ -3,7 +3,7 @@
 # Generate selective minimization command from a .geo file
 # ------------------------------------------------------------
 # Usage:
-#   ./generate_minimize_sel.sh model.geo
+#   ./generate_minimize_angles_sel.sh model.geo
 # ------------------------------------------------------------
 
 if [ $# -ne 1 ]; then
