@@ -28,7 +28,7 @@ Identify and selectively minimize **bond-angle outliers** (|Z| ≥ 4) from a Phe
 From your refined model:  
 
 ```bash
-phenix.geometry_minimization yourmodel.pdb write_geo_file=True max_iterations=0
+phenix.pdb_interpretation your_model.pdb write_geo_file=True
 ```
 ### **2. Extract residues with bad angles and generate the geometry-minimization command**
 
