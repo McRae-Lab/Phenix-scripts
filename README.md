@@ -9,7 +9,8 @@ It reads the `.geo` restraint report from Phenix, extracts residues with large |
 
 ## Requirements ⚙️  
 
-- **Bash** (Linux/macOS shell)  
+- **Bash** (Linux/macOS shell)
+- **Python 3.7+** 
 - **Phenix ≥ 1.20** (for geometry minimization & restraint generation)  
 - Standard Unix tools: `awk`, `sed`, `sort`, `wc`  
 
