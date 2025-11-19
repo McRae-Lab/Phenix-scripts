@@ -23,13 +23,20 @@ Identify and selectively minimize **bond-angle outliers** (|Z| ≥ 4) from a Phe
 
 ## Protocol 🚀  
 
-### **1. Generate the geometry restraints file (.geo)**  
+### **1. Generate the geometry restraints files (.geo & .eff)**  
 
 From your refined model:  
 
 ```bash
 phenix.pdb_interpretation yourmodel.pdb write_geo_file=True
 ```
+
+From a fasta file and dot-bracket secondary structure:
+```bash
+python dot_bracket_to_eff.py fasta.fasta secstruct.txt \
+    --chain A --format phenix > SS.eff
+```
+
 ### **2. Extract residues with bad angles and generate the geometry-minimization command**
 
 Run the script:  
@@ -53,6 +60,7 @@ phenix.geometry_minimization yourmodel.pdb \
     selection="(chain A and resid 153) or (chain A and resid 154)" \
     max_iterations=500
 ```
+Optionally add the .eff file to the command to enforce base WC base pairs
 
 ### **3. Acknowledgment** 📜
 
